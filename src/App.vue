@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view /> -->
+    <Widget />
   </div>
 </template>
+
+<script>
+import Widget from "./components/Widget.vue";
+
+export default {
+  components: {
+    Widget,
+  },
+};
+</script>
+
 
 <style>
 #app {
