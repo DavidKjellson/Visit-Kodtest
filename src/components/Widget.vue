@@ -1,6 +1,8 @@
 <template>
   <div>
-    {{ pets }}
+    <div v-for="(pet, idx) in pets" :key="idx">
+      {{ pet.name }}
+    </div>
   </div>
 </template>
 
@@ -8,11 +10,12 @@
 import axios from "axios";
 export default {
   data: () => ({
+    api: "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
     pets: null,
   }),
   mounted() {
     axios
-      .get("https://petstore.swagger.io/v2/pet/findByStatus?status=available")
+      .get(this.api)
       .then((response) => (this.pets = response.data))
       .catch((error) => console.log(error));
   },
