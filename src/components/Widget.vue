@@ -4,7 +4,12 @@
     <button>Pending</button>
     <button>Sold</button>
     <div v-for="(pet, idx) in pets" :key="idx">
-      {{ pet.name }} - {{ pet.id }} - {{ pet.tags[0] }} - {{ pet.status }}
+      {{ pet.name }} - {{ pet.id }} -
+      <span v-if="pet.tags[0] != undefined"
+        >{{ pet.tags[0].id }} - {{ pet.tags[0].name }}</span
+      >
+      -
+      {{ pet.status }}
     </div>
   </div>
 </template>
