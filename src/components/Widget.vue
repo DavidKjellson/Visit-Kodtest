@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button>Available</button>
+    <Frame />
+    <!-- <button>Available</button>
     <button>Pending</button>
     <button>Sold</button>
     <div v-for="(pet, idx) in pets" :key="idx">
@@ -10,13 +11,18 @@
       >
       -
       {{ pet.status }}
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Frame from "./Frame.vue";
+
 export default {
+  components: {
+    Frame,
+  },
   data: () => ({
     api: "https://petstore.swagger.io/v2/pet/findByStatus?status=available,pending,sold",
     pets: null,
