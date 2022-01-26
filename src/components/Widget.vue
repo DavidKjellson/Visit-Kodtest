@@ -1,7 +1,10 @@
 <template>
   <div>
+    <button>Available</button>
+    <button>Pending</button>
+    <button>Sold</button>
     <div v-for="(pet, idx) in pets" :key="idx">
-      {{ pet.name }}
+      {{ pet.name }} - {{ pet.id }} - {{ pet.tags[0] }} - {{ pet.status }}
     </div>
   </div>
 </template>
@@ -10,29 +13,28 @@
 import axios from "axios";
 export default {
   data: () => ({
-    api: "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
+    api: "https://petstore.swagger.io/v2/pet/findByStatus?status=available,pending,sold",
     pets: null,
+    // available: "available",
+    // pending: "pending",
   }),
+  // methods: {
+  //   setAvailable() {
+  //     this.status = "available";
+  //     console.log(this.api + this.status);
+  //   },
+  //   setPending() {
+  //     this.status = "pending";
+  //     console.log(this.api + this.status);
+  //   },
+  // },
   mounted() {
+    // let available = this.api + this.available;
     axios
       .get(this.api)
       .then((response) => (this.pets = response.data))
       .catch((error) => console.log(error));
+    // console.log(this.api);
   },
-  // methods: {
-  //   getPets() {
-  //     let _this = this;
-  //     axios
-  //       .get("https://petstore.swagger.io/v2/pet/findByStatus?status=available")
-  //       .then(function (response) {
-  //         _this.pets = response.data;
-  //         // _this.pets.forEach((pet) => {
-  //         //   _this.pets.push(pet);
-  //         // });
-  //         console.log(response.data);
-  //         // _this.pets.push(response.data[0]);
-  //       });
-  //   },
-  // },
 };
 </script>
