@@ -1,8 +1,11 @@
 <template>
-  <div class="frame"></div>
+  <div class="frame">
+    Lorem Ipsum
+  </div>
 </template>
 
 <style scoped>
 .frame {
+ 
 }
 </style>
