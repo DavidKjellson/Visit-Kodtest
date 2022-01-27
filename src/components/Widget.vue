@@ -1,27 +1,20 @@
 <template>
   <div class="widget">
-    <Frame>
-      <Header>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>ID</th>
-            <th>Tags</th>
-          </tr>
-        </table></Header
-      >
-      <table>
-        <tr>
-          <th>Hund</th>
-          <th>Hund</th>
-          <th>Hund</th>
+    <Frame
+      ><table>
+        <Header />
+
+        <tr v-for="(pet, idx) in pets.slice(0, 5)" :key="idx">
+          <th>{{ pet.name }}</th>
+          <th>{{ pet.id }}</th>
+          <th v-if="pet.tags[0] != undefined">
+            {{ pet.tags[0].id }}, {{ pet.tags[0].name }}
+          </th>
         </tr>
       </table></Frame
     >
-    <!-- <button>Available</button>
-    <button>Pending</button>
-    <button>Sold</button>
-    <div v-for="(pet, idx) in pets" :key="idx">
+
+    <!-- <div v-for="(pet, idx) in pets.slice(0, 5)" :key="idx">
       {{ pet.name }} - {{ pet.id }} -
       <span v-if="pet.tags[0] != undefined"
         >{{ pet.tags[0].id }} - {{ pet.tags[0].name }}</span
@@ -79,7 +72,8 @@ export default {
   height: 50vh;
 }
 table {
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
+  border-collapse: collapse;
 }
 </style>

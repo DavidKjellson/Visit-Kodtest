@@ -1,7 +1,11 @@
 <template>
-  <div class="header">
-    <slot />
-  </div>
+  <tr class="header">
+    <th>Name</th>
+    <th>ID</th>
+    <th>Tags</th>
+
+    <!-- <slot /> -->
+  </tr>
 </template>
 
 <style scoped>
@@ -12,5 +16,9 @@
   width: 100%;
   margin: 0 auto;
   /* #261447 */
+}
+table {
+  table-layout: auto;
+  width: 100%;
 }
 </style>
