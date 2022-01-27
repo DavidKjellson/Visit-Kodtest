@@ -72,7 +72,7 @@ export default {
   height: 50vh;
 }
 table {
-  table-layout: auto;
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 }
