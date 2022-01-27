@@ -1,28 +1,42 @@
 <template>
   <div class="frame">
-    <Header />
-    <!-- <div class="header">LLLLLL</div> -->
+    <!--     <table>
+      <tr>
+        <Header
+          ><th>Company</th>
+          <th>Contact</th>
+          <th>Country</th></Header
+        >
+      </tr>
+      <tr>
+        <td>k</td>
+        <td>k</td>
+        <td>k</td>
+      </tr>
+    </table> -->
+    <!-- <Header>????</Header> -->
     <slot />
   </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
-export default {
-  components: {
-    Header,
-  },
-};
+// import Header from "./Header.vue";
+// export default {
+//   components: {
+//     Header,
+//   },
+// };
 </script>
 
 
 <style scoped>
 .frame {
-  width: 420px;
+  width: 500px;
   border: solid;
   border-width: 1px;
   border-radius: 0.5rem;
   justify-content: space-around;
+  font-size: 1.2rem;
 }
 /* .header {
   display: block;
