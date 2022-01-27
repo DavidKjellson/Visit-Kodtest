@@ -1,6 +1,6 @@
 <template>
   <div class="widget">
-    <Frame />
+    <Frame>Lorem Ipsum</Frame>
     <!-- <button>Available</button>
     <button>Pending</button>
     <button>Sold</button>
