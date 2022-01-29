@@ -3,8 +3,6 @@
     <th>Name</th>
     <th>ID</th>
     <th>Tags</th>
-
-    <!-- <slot /> -->
   </tr>
 </template>
 
