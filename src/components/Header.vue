@@ -21,8 +21,4 @@ export default {
   margin: 0 auto;
   /* #261447 */
 }
-table {
-  table-layout: auto;
-  width: 100%;
-}
 </style>

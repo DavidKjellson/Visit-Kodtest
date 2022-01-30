@@ -23,5 +23,6 @@ span {
 span:hover {
   cursor: pointer;
   background-color: #5c5588;
+  border-radius: 0 0 0.4rem 0.4rem;
 }
 </style>

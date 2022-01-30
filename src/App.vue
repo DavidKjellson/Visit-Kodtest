@@ -20,16 +20,12 @@
 </template>
 
 <script>
-// import Widget from "./components/Widget.vue";
 import axios from "axios";
-// import Footer from "./components/Footer.vue";
 import Frame from "./components/Frame.vue";
 
 export default {
   components: {
-    // Footer,
     Frame,
-    // Widget,
   },
   data: () => ({
     all: "All",
@@ -89,7 +85,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   /* width: 100vw; */
   height: 50vh;
 }
