@@ -43,4 +43,9 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 </style>

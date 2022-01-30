@@ -4,7 +4,7 @@
       <Frame>
         <template v-slot:table>
           <tr v-for="(pet, idx) in filteredPets.slice(0, 5)" :key="idx">
-            <th>{{ pet.name }} + {{ pet.status }}</th>
+            <th>{{ pet.name }}</th>
             <th>{{ pet.id }}</th>
             <th v-if="pet.tags[0] != undefined">
               {{ pet.tags[0].id }}, {{ pet.tags[0].name }}
