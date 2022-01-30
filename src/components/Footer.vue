@@ -35,7 +35,10 @@ label:hover {
 input {
   visibility: hidden;
 }
-label:checked {
-  background-color: red;
+.checked {
+  background-color: #261447;
+}
+.checked:hover {
+  background-color: #261447;
 }
 </style>

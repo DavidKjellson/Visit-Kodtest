@@ -12,7 +12,10 @@
           </tr>
         </template>
         <template v-slot:footer id="pets">
-          <label v-for="status in statuses" :key="status"
+          <label
+            v-for="status in statuses"
+            :key="status"
+            :class="{ checked: all === status.toLowerCase() }"
             ><input
               type="radio"
               :value="status.toLowerCase()"
