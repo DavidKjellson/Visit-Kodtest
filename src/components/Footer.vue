@@ -25,4 +25,14 @@ span:hover {
   background-color: #5c5588;
   border-radius: 0 0 0.4rem 0.4rem;
 }
+label {
+  cursor: pointer;
+  width: 100%;
+}
+label:hover {
+  background-color: #5c5588;
+}
+input {
+  visibility: hidden;
+}
 </style>

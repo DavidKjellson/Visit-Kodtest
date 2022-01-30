@@ -21,4 +21,6 @@ export default {
   margin: 0 auto;
   /* #261447 */
 }
+/*   border-radius: 0.4rem 0.4rem 0 0;
+ */
 </style>

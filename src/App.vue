@@ -3,16 +3,28 @@
     <div class="widget">
       <Frame>
         <template v-slot:table>
-          <tr v-for="(pet, idx) in filteredPets.slice(0, 5)" :key="idx">
-            <th>{{ pet.name }}</th>
+          <tr v-for="(pet, idx) in filteredPets.slice(0, 30)" :key="idx">
+            <th>{{ pet.name }} + {{ pet.status }}</th>
             <th>{{ pet.id }}</th>
             <th v-if="pet.tags[0] != undefined">
               {{ pet.tags[0].id }}, {{ pet.tags[0].name }}
             </th>
           </tr>
         </template>
-        <template v-slot:footer>
-          <span v-for="status in statuses" :key="status">{{ status }}</span>
+        <template v-slot:footer id="pets">
+          <label><input type="radio" value="All" v-model="all" />All</label>
+          <label
+            ><input
+              type="radio"
+              value="available"
+              v-model="all"
+            />Available</label
+          >
+          <label
+            ><input type="radio" value="pending" v-model="all" />Pending</label
+          >
+          <label><input type="radio" value="sold" v-model="all" />Sold</label>
+          <!-- <span v-for="status in statuses" :key="status">{{ status }}</span> -->
         </template>
       </Frame>
     </div>
@@ -30,24 +42,19 @@ export default {
   data: () => ({
     all: "All",
     api: "https://petstore.swagger.io/v2/pet/findByStatus?status=available,pending,sold",
-    pets: null,
+    pets: [],
     statuses: ["All", "Available", "Pending", "Sold"],
   }),
   computed: {
-    filteredPets: {
-      get: function () {
-        let status = this.all;
-        if (status === "All") {
-          return this.pets;
-        } else {
-          return this.pets.filter(function (pet) {
-            return pet.status === status;
-          });
-        }
-      },
-      set: function (newValue) {
-        this.$store.state.pets = newValue;
-      },
+    filteredPets: function () {
+      let status = this.all;
+      if (status === "All") {
+        return this.pets;
+      } else {
+        return this.pets.filter(function (pet) {
+          return pet.status === status;
+        });
+      }
     },
   },
   mounted() {
