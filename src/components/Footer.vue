@@ -40,5 +40,6 @@ input {
 }
 .checked:hover {
   background-color: #261447;
+  cursor: default;
 }
 </style>
