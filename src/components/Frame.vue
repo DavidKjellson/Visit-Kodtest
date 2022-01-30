@@ -19,9 +19,6 @@ export default {
     Footer,
     Header,
   },
-  data: () => ({
-    statuses: ["All", "Available", "Pending", "Sold"],
-  }),
 };
 </script>
 
