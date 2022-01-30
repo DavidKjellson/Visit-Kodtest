@@ -16,30 +16,30 @@
         ><input type="radio" v-model="filteredPets" value="Sold" /> Sold</label
       >
     </div> -->
-    <Frame
-      ><table>
-        <Header />
-        <tr v-for="(pet, idx) in filteredPets.slice(0, 5)" :key="idx">
-          <th>{{ pet.name }}</th>
-          <th>{{ pet.id }}</th>
-          <th v-if="pet.tags[0] != undefined">
-            {{ pet.tags[0].id }}, {{ pet.tags[0].name }}
-          </th>
-        </tr>
-      </table></Frame
-    >
+    <Frame>
+      <!-- <table> -->
+      <!-- <Header /> -->
+      <tr v-for="(pet, idx) in filteredPets.slice(0, 5)" :key="idx">
+        <th>{{ pet.name }}</th>
+        <th>{{ pet.id }}</th>
+        <th v-if="pet.tags[0] != undefined">
+          {{ pet.tags[0].id }}, {{ pet.tags[0].name }}
+        </th>
+      </tr>
+      <!-- </table> -->
+    </Frame>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import Frame from "./Frame.vue";
-import Header from "./Header.vue";
+// import Header from "./Header.vue";
 
 export default {
   components: {
     Frame,
-    Header,
+    // Header,
   },
   data: () => ({
     all: "All",

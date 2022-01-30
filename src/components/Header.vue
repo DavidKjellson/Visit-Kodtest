@@ -1,10 +1,16 @@
 <template>
   <tr class="header">
-    <th>Name</th>
-    <th>ID</th>
-    <th>Tags</th>
+    <th v-for="category in categories" :key="category">{{ category }}</th>
   </tr>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    categories: ["Name", "ID", "Tags"],
+  }),
+};
+</script>
 
 <style scoped>
 .header {
