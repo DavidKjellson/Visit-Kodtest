@@ -15,16 +15,7 @@
   display: flex;
   justify-content: center;
   border-radius: 0 0 0.4rem 0.4rem;
-  /* #261447 */
 }
-/* span {
-  width: 100%;
-}
-span:hover {
-  cursor: pointer;
-  background-color: #5c5588;
-  border-radius: 0 0 0.4rem 0.4rem;
-} */
 label {
   cursor: pointer;
   width: 100%;

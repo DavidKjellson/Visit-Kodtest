@@ -33,7 +33,6 @@ export default {
   justify-content: space-around;
   font-size: 1.2rem;
   width: 100%;
-  /* border-radius: 0.1rem 0.1rem 0 0; */
 }
 table {
   table-layout: fixed;
